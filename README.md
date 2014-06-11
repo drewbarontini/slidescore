@@ -6,6 +6,8 @@ Recently, I've seen a [few](http://wolfslittlestore.be/html-prototyping-talk/)
 a transcript next to each slide. I thought this was a really nice idea, so I
 took it and built a little Middleman application that makes it easy.
 
+First, configure the app in `data/config.yml`:
+
 ```yml
 title: 'Talk Title'
 description: 'This is the description of the talk.'
@@ -13,7 +15,7 @@ file_ext: 'png' # Standard image file extension (can change per slide)
 table_of_contents: false
 ```
 
-After you've adjusted `data/config.yml`, you can then start adding your slides.
+Next, you can start adding your slides:
 
 ```yml
 - title: First Slide
@@ -48,7 +50,7 @@ You can specify the following:
 `image` - If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. 01.png for the first slide, etc.)
 `file_ext` - If you need to change this slide's image extension from the one specified in `data/config.yml`
 
-That's it! Now you can start building out the transcript alongside your slide images.
+That's it! Now you can start building out the transcript alongside your slide images. Follow the steps below to get the Middleman app set up.
 
 Setup
 -----
