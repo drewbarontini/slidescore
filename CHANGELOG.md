@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.2.0
+06/11/14
+
+- Add the ability to move your slide description into a partial Markdown file
+
 ## Version 1.1.0
 06/11/14
 

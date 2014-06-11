@@ -13,6 +13,9 @@
         .mtm
           - if slide.title
             %h1.h2= slide.title
-          :markdown
-            #{ slide.description }
+          - if slide.partial
+            = partial "slides/0#{i + 1}"
+          - else
+            :markdown
+              #{ slide.description }
 

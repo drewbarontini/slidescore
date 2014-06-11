@@ -22,3 +22,7 @@
     that is in `images/slides/04.gif`.
   file_ext: 'gif'
 
+- title: Partial Slide
+  partial: true
+  file_ext: 'jpg'
+
