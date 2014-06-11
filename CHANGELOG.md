@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.2.1
+06/11/14
+
+- Small style adjustment to the lists
+
 ## Version 1.2.0
 06/11/14
 
