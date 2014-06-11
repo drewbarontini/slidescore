@@ -45,10 +45,10 @@ Next, you can start adding your slides in `data/slides.yml`:
 
 You can specify the following:
 
-`title` - The title of the slide (optional)
-`description` - The description text (can use Markdown here!)
-`image` - If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. 01.png for the first slide, etc.)
-`file_ext` - If you need to change this slide's image extension from the one specified in `data/config.yml`
+- `title` &mdash; The title of the slide (optional)
+- `description` &mdash; The description text (can use Markdown here!)
+- `image` &mdash; If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. 01.png for the first slide, etc.)
+- `file_ext` &mdash; If you need to change this slide's image extension from the one specified in `data/config.yml`
 
 That's it! Now you can start building out the transcript alongside your slide images. Follow the steps below to get the Middleman app set up.
 
