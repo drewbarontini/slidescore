@@ -1,0 +1,18 @@
+- title: First Slide
+  description: This is some text for the first slide.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- title: Second Slide
+  description: This is some text for the second slide.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- title: Third Slide
+  description: This is some text for the third slide.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- description:
+    This is some text for the fourth slide that doesn't have a title. Also,
+    this slide changes the default `file_ext`, and it uses a standard image
+    that is in `images/slides/04.gif`.
+  file_ext: 'gif'
+
