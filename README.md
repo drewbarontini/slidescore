@@ -15,7 +15,7 @@ file_ext: 'png' # Standard image file extension (can change per slide)
 table_of_contents: false
 ```
 
-Next, you can start adding your slides:
+Next, you can start adding your slides in `data/slides.yml`:
 
 ```yml
 - title: First Slide
