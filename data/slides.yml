@@ -1,13 +1,19 @@
 - title: First Slide
-  description: This is some text for the first slide.
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
 - title: Second Slide
-  description: This is some text for the second slide.
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
 - title: Third Slide
-  description: This is some text for the third slide.
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
 - description:
