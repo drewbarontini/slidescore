@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.1.0
+06/11/14
+
+- Fix the YAML Markdown
+
 ## Version 1.0.1
 06/11/14
 

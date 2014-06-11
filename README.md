@@ -19,24 +19,24 @@ Next, you can start adding your slides in `data/slides.yml`:
 
 ```yml
 - title: First Slide
-  description:
+  description: >
     This is some text for the first slide. It doesn't include an image, so it
     just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
 - title: Second Slide
-  description:
+  description: >
     This is some text for the first slide. It doesn't include an image, so it
     just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
 - title: Third Slide
-  description:
+  description: >
     This is some text for the first slide. It doesn't include an image, so it
     just uses a placeholder specified in `data/slides.yml`.
   image: 'http://placehold.it/1280x720/000/000'
 
-- description:
+- description: >
     This is some text for the fourth slide that doesn't have a title. Also,
     this slide changes the default `file_ext`, and it uses a standard image
     that is in `images/slides/04.gif`.
