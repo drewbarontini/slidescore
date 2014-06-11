@@ -1,21 +1,60 @@
-Baseman
-=======
+Slidescore
+==========
 
-This is a base [Middleman](http://middlemanapp.com/) application. This
-sets all of the defaults that I'll generally set when building a new
-application on Middleman. Be sure to read all of the documentation to
-become familiar with Middleman before using this base setup.
+Recently, I've seen a [few](http://wolfslittlestore.be/html-prototyping-talk/)
+[sites](http://idlewords.com/bt14.htm) that posted slides from a talk alongside
+a transcript next to each slide. I thought this was a really nice idea, so I
+took it and built a little Middleman application that makes it easy.
+
+```yml
+title: 'Talk Title'
+description: 'This is the description of the talk.'
+file_ext: 'png' # Standard image file extension (can change per slide)
+table_of_contents: false
+```
+
+After you've adjusted `data/config.yml`, you can then start adding your slides.
+
+```yml
+- title: First Slide
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- title: Second Slide
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- title: Third Slide
+  description:
+    This is some text for the first slide. It doesn't include an image, so it
+    just uses a placeholder specified in `data/slides.yml`.
+  image: 'http://placehold.it/1280x720/000/000'
+
+- description:
+    This is some text for the fourth slide that doesn't have a title. Also,
+    this slide changes the default `file_ext`, and it uses a standard image
+    that is in `images/slides/04.gif`.
+  file_ext: 'gif'
+```
+
+You can specify the following:
+
+`title` - The title of the slide (optional)
+`description` - The description text (can use Markdown here!)
+`image` - If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. 01.png for the first slide, etc.)
+`file_ext` - If you need to change this slide's image extension from the one specified in `data/config.yml`
+
+That's it! Now you can start building out the transcript alongside your slide images.
 
 Setup
 -----
 
 ```shell
 gem install bundler
-```
-
-Then run:
-
-```shell
 bundle install
 ```
 
@@ -52,80 +91,6 @@ Or, if you're using Rbenv:
 Deploying
 ---------
 
-### To GitHub Pages
+If you'd like to deploy the site, add a `Rakefile` and take a look at the [Baseman](https://github.com/drewbarontini/baseman#deploying) deploy documentation.
 
-Create a new file `Rakefile` at the root of your project, and paste
-in the following:
-
-```ruby
-desc "Generate flat files with Middleman"
-task :generate do
-  puts "## Generating site with Middleman"
-  system "./bin/middleman build --clean"
-  cd "build" do
-    system "git init"
-    system "git remote add origin REPO_URL"
-  end
-end
-
-desc "Push the build to the gh-pages branch on GitHub"
-task :push do
-  puts "## Deploying build to GitHub Pages"
-  cd "build" do
-    system "git add ."
-    system "git add -u"
-    system "git commit -m \"Site updated at #{Time.now.utc}\""
-    system "git push origin master:gh-pages --force"
-  end
-end
-
-desc "Generate flat files and deploy to GitHub Pages"
-task :deploy => [:generate, :push] do
-end
-```
-
-Replace the `REPO_URL` with your repositorie's URL. This assumes that
-you have a `gh-pages` branch that is serving up your site.
-
-You can now deploy by running `rake deploy` from your project's root.
-
-### To FTP Server Using rsync
-
-**Requirement:** You'll need to have SSH access to your server.
-
-Create a new file `Rakefile` at the root of your project, and paste
-in the following:
-
-```ruby
-namespace :deploy do
-  task :generate do
-    puts "## Generating site with Middleman"
-    system "./bin/middleman build --clean"
-  end
-
-  task :production => [:generate] do
-    system "rsync -avz --delete -e ssh ./build/ SSH_LOGIN_PATH"
-  end
-
-  task :staging => [:generate] do
-    system "rsync -avz --delete -e ssh ./build/ SSH_LOGIN_PATH"
-  end
-end
-```
-
-Replace the `SSH_LOGIN_PATH` with your own.
-
-
-You can now deploy to your staging server by running `rake deploy:staging`
-from your project's root. Use `rake deploy:production` to deploy to your
-production server.
-
-### Middleman Deploy
-
-Another option is the [middleman-deploy](https://github.com/tvaughan/middleman-deploy) extension, which provides more deployment methods for rsync, ftp, sftp or git. Be sure to check it out!
-
-Credits
--------
-
-Big hat tip to [Arron Mabrey](https://github.com/arronmabrey) for the
-deploy scripts :)
+**Note**: Be sure to remove the `Rakefile` from the `.gitignore`!
