@@ -1,24 +1,29 @@
 # Changelog
 
+## Version 1.2.2
+06/12/14
+
+- **Remove** unneeded CSS
+
 ## Version 1.2.1
 06/11/14
 
-- Small style adjustment to the lists
+- **Update** list styles
 
 ## Version 1.2.0
 06/11/14
 
-- Add the ability to move your slide description into a partial Markdown file
+- **Add** the ability to move the slide description into a partial Markdown file
 
 ## Version 1.1.0
 06/11/14
 
-- Fix the YAML Markdown
+- **Update** the YAML Markdown
 
 ## Version 1.0.1
 06/11/14
 
-- Adjust the slide description markup
+- **Update** the slide description markup
 
 ## Version 1.0.0
 06/11/14
