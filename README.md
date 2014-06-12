@@ -45,6 +45,21 @@ Next, you can start adding your slides in `data/slides.yml`:
 - title: Partial Slide
   partial: true
   file_ext: 'jpg'
+
+- title: Multiple Images
+  description: >
+    This slide has more than one image tied to it. You just need to add an
+    `additional_images` option with a list of image paths.
+  image: 'http://placehold.it/1280x720/000/000'
+  additional_images:
+    - 'http://placehold.it/1280x720/000/000'
+    - 'http://placehold.it/1280x720/000/000'
+
+- title: Multiple Images As Files
+  partial: true
+  additional_images: true
+  additional_images_number: 2
+  file_ext: 'jpg'
 ```
 
 You can specify the following:
@@ -54,6 +69,8 @@ You can specify the following:
 - `partial` &mdash; Set this to `true` if you want to move your Markdown description into a partial file (add your file to `source/slides/_SLIDENUMBER.md` - e.g. `source/slides/_5.md`)
 - `image` &mdash; If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. `1.png` for the first slide, etc.)
 - `file_ext` &mdash; If you need to change this slide's image extension from the one specified in `data/config.yml`
+- `addtional_images` &mdash; either `true` or a list of image paths
+- `additional_images_number` &mdash; the number of additional images, if you include them locally
 
 That's it! Now you can start building out the transcript alongside your slide images. Follow the steps below to get the Middleman app set up.
 

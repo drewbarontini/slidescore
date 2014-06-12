@@ -26,3 +26,17 @@
   partial: true
   file_ext: 'jpg'
 
+- title: Multiple Images
+  description: >
+    This slide has more than one image tied to it. You just need to add an
+    `additional_images` option with a list of image paths.
+  image: 'http://placehold.it/1280x720/000/000'
+  additional_images:
+    - 'http://placehold.it/1280x720/000/000'
+    - 'http://placehold.it/1280x720/000/000'
+
+- title: Multiple Images As Local Files
+  partial: true
+  additional_images: true
+  additional_images_number: 2
+  file_ext: 'jpg'

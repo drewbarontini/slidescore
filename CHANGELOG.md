@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.0
+06/12/14
+
+- **Add** the ability to specify multiple images per section
+
 ## Version 1.3.0
 06/12/14
 
