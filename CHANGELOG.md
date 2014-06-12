@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.1
+06/12/14
+
+- **Remove** unused JavaScript file call
+
 ## Version 1.4.0
 06/12/14
 
