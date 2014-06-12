@@ -28,7 +28,7 @@
 
 - title: Multiple Images
   description: >
-    This slide has more than one image tied to it. You just need to add an
+    This section has more than one image tied to it. You just need to add an
     `additional_images` option with a list of image paths.
   image: 'http://placehold.it/1280x720/000/000'
   additional_images:
