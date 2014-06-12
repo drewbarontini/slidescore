@@ -19,7 +19,7 @@
 - description: >
     This is some text for the fourth slide that doesn't have a title. Also,
     this slide changes the default `file_ext`, and it uses a standard image
-    that is in `images/slides/04.gif`.
+    that is in `images/slides/4.gif`.
   file_ext: 'gif'
 
 - title: Partial Slide

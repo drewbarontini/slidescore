@@ -39,7 +39,7 @@ Next, you can start adding your slides in `data/slides.yml`:
 - description: >
     This is some text for the fourth slide that doesn't have a title. Also,
     this slide changes the default `file_ext`, and it uses a standard image
-    that is in `images/slides/04.gif`.
+    that is in `images/slides/4.gif`.
   file_ext: 'gif'
 
 - title: Partial Slide
@@ -51,8 +51,8 @@ You can specify the following:
 
 - `title` &mdash; The title of the slide (optional)
 - `description` &mdash; The description text (can use Markdown here!)
-- `partial` &mdash; Set this to `true` if you want to move your Markdown description into a partial file (add your file to `source/slides/_SLIDENUMBER.md` - e.g. `source/slides/_05.md`)
-- `image` &mdash; If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. `01.png` for the first slide, etc.)
+- `partial` &mdash; Set this to `true` if you want to move your Markdown description into a partial file (add your file to `source/slides/_SLIDENUMBER.md` - e.g. `source/slides/_5.md`)
+- `image` &mdash; If you need to specify a custom location, otherwise it'll pull from `assets/images/slides/SLIDENUMBER.png` (e.g. `1.png` for the first slide, etc.)
 - `file_ext` &mdash; If you need to change this slide's image extension from the one specified in `data/config.yml`
 
 That's it! Now you can start building out the transcript alongside your slide images. Follow the steps below to get the Middleman app set up.

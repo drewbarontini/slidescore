@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.3.0
+06/12/14
+
+- **Remove** the leading `0` before image and partial filenames
+
 ## Version 1.2.3
 06/12/14
 

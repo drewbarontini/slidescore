@@ -6,14 +6,14 @@
           = image_tag slide.image, alt: "#{slide.title}"
         - else
           - unless slide.file_ext
-            = image_tag "slides/0#{i + 1}.#{data.config.file_ext}", alt: "#{slide.title}"
+            = image_tag "slides/#{i + 1}.#{data.config.file_ext}", alt: "#{slide.title}"
           - else
-            = image_tag "slides/0#{i + 1}.#{slide.file_ext}", alt: "#{slide.title}"
+            = image_tag "slides/#{i + 1}.#{slide.file_ext}", alt: "#{slide.title}"
       .grid-box.grid-box--desk--1of2
         - if slide.title
           %h1.h2= slide.title
         - if slide.partial
-          = partial "slides/0#{i + 1}"
+          = partial "slides/#{i + 1}"
         - else
           :markdown
             #{ slide.description }
