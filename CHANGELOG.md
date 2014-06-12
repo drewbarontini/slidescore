@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.2
+06/12/14
+
+- **Update** the image file extension check
+
 ## Version 1.4.1
 06/12/14
 

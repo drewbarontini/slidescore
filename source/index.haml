@@ -2,20 +2,18 @@
   %section.bdrb.mbl.pbl
     .grid{ id: (slide.title ? "#{slugify(slide.title)}" : "slide-#{i + 1}") }
       .grid-box.grid-box--desk--1of2
+        - file_ext = slide.file_ext ? slide.file_ext : data.config.file_ext
         - if slide.image
           = image_tag slide.image, alt: "#{slide.title}", class: ('mbs' if slide.additional_images)
         - else
-          - unless slide.file_ext
-            = image_tag "slides/#{i + 1}.#{data.config.file_ext}", alt: "#{slide.title}", class: ('mbs' if slide.additional_images)
-          - else
-            = image_tag "slides/#{i + 1}.#{slide.file_ext}", alt: "#{slide.title}", class: ('mbs' if slide.additional_images)
+          = image_tag "slides/#{i + 1}.#{file_ext}", alt: "#{slide.title}", class: ('mbs' if slide.additional_images)
         - if slide.additional_images
           - unless slide.additional_images == true
             - slide.additional_images.each do |image|
               = image_tag image, alt: "#{slide.title}", class: 'mbs'
           - else
             - (1..slide.additional_images_number).each_with_index do |image, image_index|
-              = image_tag "slides/#{i + 1}-#{image_index + 1}.#{slide.file_ext}", alt: "#{slide.title}", class: 'mbs'
+              = image_tag "slides/#{i + 1}-#{image_index + 1}.#{file_ext}", alt: "#{slide.title}", class: 'mbs'
       .grid-box.grid-box--desk--1of2
         - if slide.title
           %h1.h2= slide.title
