@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.2.3
+06/12/14
+
+- **Remove** the top margin of the slide content
+
 ## Version 1.2.2
 06/12/14
 
