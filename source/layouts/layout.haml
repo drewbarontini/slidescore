@@ -13,11 +13,11 @@
       .row.bci
         .cell.well.well--l
           %h1.mbf= data.config.title
-          %p.tcs.tsxl.twl= data.config.description
+          %p.mbf.tcs= data.config.description
 
     %main.content
       .row
-        .cell.well
+        .cell
           - if data.config.table_of_contents
             %ol.mbl
               - data.slides.each.with_index do |slide, i|

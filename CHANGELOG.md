@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.3
+06/12/14
+
+- **Update** font styles
+
 ## Version 1.4.2
 06/12/14
 
