@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.5.3
+06/14/14
+
+- **Update** the scroll offset
+
 ## Version 1.5.2
 06/14/14
 

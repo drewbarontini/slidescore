@@ -124,7 +124,7 @@ $ ->
   options =
     slides: $('section')
     scrollSpeed: 250
-    offsetPadding: 20
+    offsetPadding: 40
 
   Slidescore.init(options)
 
