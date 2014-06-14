@@ -74,6 +74,14 @@ You can specify the following:
 
 That's it! Now you can start building out the transcript alongside your slide images. Follow the steps below to get the Middleman app set up.
 
+Keyboard Shortcuts
+------------------
+
+- `h` &mdash; Go to the first slide
+- `j` &mdash; Go to the next slide
+- `k` &mdash; Go to the previous slide
+- `l` &mdash; Go to the last slide
+
 Setup
 -----
 

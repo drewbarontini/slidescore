@@ -1,5 +1,5 @@
 - data.slides.each.with_index do |slide, i|
-  %section.bdrb.mbl.pbl
+  %section.bdrb.mbl.pbl{ 'data-id' => "#{i + 1}" }
     .grid{ id: (slide.title ? "#{slugify(slide.title)}" : "slide-#{i + 1}") }
       .grid-box.grid-box--desk--1of2
         .mbmbfm--desk

@@ -1,7 +1,12 @@
 # Changelog
 
+## Version 1.5.0
+06/14/14
+
+- **Add** keyboard shortcuts for navigation
+
 ## Version 1.4.4
-06/12/14
+06/14/14
 
 - **Update** responsiveness of the slides
 
