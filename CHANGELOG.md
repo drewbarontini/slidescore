@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.6.0
+06/14/14
+
+- **Add** keyboard shortcuts modal
+
 ## Version 1.5.4
 06/14/14
 

@@ -1,0 +1,99 @@
+// *************************************
+//
+//   Modal
+//   -> Informational overlay
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// .modal(.is-active)
+//   %a.modal-close{ href: '#' } X
+//   .modal-backdrop
+//   .modal-content
+//     %h3.modal-title Title
+//     %ul.modal-list
+//       %li List item
+//       %li List item
+//
+// *************************************
+
+.modal
+  @extend .stretch
+  display: none
+  position: fixed
+  text-align: center
+  z-index: 10
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Active ----- //
+
+.modal.is-active
+  +respond-to($breakpoint-desk)
+    display: block
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Backdrop ----- //
+
+.modal-backdrop
+  @extend .stretch
+  background: rgba($c-highlight, 0.85)
+  position: fixed
+  z-index: 20
+
+// ----- Close ----- //
+
+.modal-close
+  color: $c-invert
+  display: block
+  font-size: 150%
+  position: absolute
+  right: $b-whitespace
+  text-decoration: none
+  top: $b-whitespace-s
+  z-index: 40
+  &:hover,
+  &:focus
+    color: $c-invert
+    text-decoration: underline
+
+// ----- Content ----- //
+
+.modal-content
+  color: $c-invert
+  left: 50%
+  position: absolute
+  top: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
+  z-index: 30
+  max-width: 40em
+
+// ----- List ----- //
+
+.modal-list
+  @extend .group
+  list-style-type: none
+  margin: 0
+  padding: 0
+  span
+    display: block
+    +respond-to($breakpoint-mobile)
+      display: inline
+  code
+    padding-left: $b-whitespace
+    padding-right: $b-whitespace
+    +respond-to($breakpoint-mobile)
+      float: left
+      margin-top: 3px // FIXME: Magic number!
+
+// ----- Title ----- //
+
+.modal-title
+  font-size: 300%
