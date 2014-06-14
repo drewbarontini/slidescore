@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.5.2
+06/14/14
+
+- **Add** an offset to the scrolling to increase the padding
+
 ## Version 1.5.1
 06/14/14
 

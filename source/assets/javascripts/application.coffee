@@ -49,8 +49,6 @@ Slidescore = do ->
   # -------------------------------------
   #   Set Location
   #   -> Sets the appropriate hash URL
-  #
-  #   i - the slide index number
   # -------------------------------------
 
   setLocation = ->
@@ -102,7 +100,7 @@ Slidescore = do ->
     to = $("section[data-id='#{i}']")
 
     $('body, html').animate({
-      scrollTop: parseInt( $(to).offset().top )
+      scrollTop: parseInt( $(to).offset().top - Slidescore.options.offsetPadding )
     }, Slidescore.options.scrollSpeed)
 
   # -------------------------------------
@@ -126,6 +124,7 @@ $ ->
   options =
     slides: $('section')
     scrollSpeed: 250
+    offsetPadding: 20
 
   Slidescore.init(options)
 
