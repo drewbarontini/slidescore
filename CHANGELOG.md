@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.4.4
+06/12/14
+
+- **Update** responsiveness of the slides
+
 ## Version 1.4.3
 06/12/14
 
