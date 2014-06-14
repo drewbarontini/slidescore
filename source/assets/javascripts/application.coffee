@@ -54,8 +54,8 @@ Slidescore = do ->
   # -------------------------------------
 
   setLocation = ->
-    i = window.location.hash.replace('#', '')
-    scrollTo(i)
+    index = window.location.hash.replace('#', '')
+    scrollTo(index)
 
   # -------------------------------------
   #   Set Slide

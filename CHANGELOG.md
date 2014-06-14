@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.5.1
+06/14/14
+
+- **Update** the keyboard navigation functionality
+
 ## Version 1.5.0
 06/14/14
 
