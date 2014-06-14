@@ -4,6 +4,7 @@
 06/14/14
 
 - **Add** keyboard shortcuts modal
+- **Add** additional alias keyboard shortcuts for navigation
 
 ## Version 1.5.4
 06/14/14
