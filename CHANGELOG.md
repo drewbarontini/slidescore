@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.5.4
+06/14/14
+
+- **Add** viewport meta tag
+
 ## Version 1.5.3
 06/14/14
 
