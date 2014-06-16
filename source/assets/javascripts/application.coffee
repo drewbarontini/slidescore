@@ -163,5 +163,5 @@ $ ->
     modal: $('.modal')
 
   Slidescore.setOptions(options)
-  Slidescore.init(options)
+  Slidescore.init()
 

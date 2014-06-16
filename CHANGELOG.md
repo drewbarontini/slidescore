@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.6.3
+06/16/14
+
+- **Remove** unneeded `options` argument in `Slidescore.init()`
+
 ## Version 1.6.2
 06/16/14
 
