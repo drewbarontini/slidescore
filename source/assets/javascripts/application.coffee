@@ -22,7 +22,7 @@ Slidescore = do ->
     'next'  : 39
     'prev'  : 37
     'space' : 32
-    'q'     : 16
+    'q'     : 191
     'esc'   : 27
 
   slidesLength = 0
@@ -54,7 +54,7 @@ Slidescore = do ->
 
   setEvents = ->
     $(document).on 'keydown', (e) ->
-      switch e.which
+      switch getKeyCode(e)
         when shortcuts.h then setSlide(1)
         when shortcuts.j then nextSlide()
         when shortcuts.next then nextSlide()
@@ -62,12 +62,24 @@ Slidescore = do ->
         when shortcuts.k then prevSlide()
         when shortcuts.prev then prevSlide()
         when shortcuts.l then setSlide(slidesLength)
-        when shortcuts.q then modal('open')
+        when e.shiftKey && shortcuts.q then modal('open')
         when shortcuts.esc then modal('close')
 
     settings.modal.on 'click', (e) ->
       e.preventDefault()
       modal('close')
+
+  # -------------------------------------
+  #   Get Key Code
+  #   -> Return the appropriate key code
+  #
+  #   e - The event object
+  # -------------------------------------
+
+  getKeyCode = (e) ->
+    e = e || window.event
+    charCode = e.keyCode || e.which
+    charCode
 
   # -------------------------------------
   #   Set Location

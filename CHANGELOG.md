@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.6.4
+06/16/14
+
+- **Update** the keyboard shortcut for the `?` to work correctly
+- Also, **Add** a more robust check for `e.which` or `e.keyCode`
+
 ## Version 1.6.3
 06/16/14
 
