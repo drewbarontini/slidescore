@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.6.2
+06/16/14
+
+- **Update** the JS module variables
+
 ## Version 1.6.1
 06/16/14
 

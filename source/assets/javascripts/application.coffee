@@ -10,7 +10,7 @@ Slidescore = do ->
   #   Variables
   # -------------------------------------
 
-  options = {}
+  settings = {}
 
   index = 0
 
@@ -25,13 +25,15 @@ Slidescore = do ->
     'q'     : 16
     'esc'   : 27
 
+  slidesLength = 0
+
   # -------------------------------------
   #   Init
   #   -> Initialize the module
   # -------------------------------------
 
   init = ->
-    Slidescore.slidesLength = Slidescore.options.slides.length
+    slidesLength = settings.slides.length
     setEvents()
     setLocation() if window.location.hash
 
@@ -43,7 +45,7 @@ Slidescore = do ->
   # -------------------------------------
 
   setOptions = (options) ->
-    Slidescore.options = options
+    settings = options
 
   # -------------------------------------
   #   Set Events
@@ -59,11 +61,11 @@ Slidescore = do ->
         when shortcuts.space then nextSlide()
         when shortcuts.k then prevSlide()
         when shortcuts.prev then prevSlide()
-        when shortcuts.l then setSlide(Slidescore.slidesLength)
+        when shortcuts.l then setSlide(slidesLength)
         when shortcuts.q then modal('open')
         when shortcuts.esc then modal('close')
 
-    Slidescore.options.modal.on 'click', (e) ->
+    settings.modal.on 'click', (e) ->
       e.preventDefault()
       modal('close')
 
@@ -94,7 +96,7 @@ Slidescore = do ->
   # -------------------------------------
 
   nextSlide = ->
-    unless index == Slidescore.slidesLength
+    unless index == slidesLength
       index++
       scrollTo()
       changeUrl()
@@ -121,8 +123,8 @@ Slidescore = do ->
     to = $("section[data-id='#{i}']")
 
     $('body, html').animate({
-      scrollTop: parseInt( $(to).offset().top - Slidescore.options.offsetPadding )
-    }, Slidescore.options.scrollSpeed)
+      scrollTop: parseInt( $(to).offset().top - settings.offsetPadding )
+    }, settings.scrollSpeed)
 
   # -------------------------------------
   #   Change URL
@@ -139,8 +141,8 @@ Slidescore = do ->
   # -------------------------------------
 
   modal = (action) ->
-    Slidescore.options.modal.toggleClass('is-active') if action == 'open'
-    Slidescore.options.modal.removeClass('is-active') if action == 'close'
+    settings.modal.toggleClass('is-active') if action == 'open'
+    settings.modal.removeClass('is-active') if action == 'close'
 
   # -------------------------------------
   #   Public Methods
