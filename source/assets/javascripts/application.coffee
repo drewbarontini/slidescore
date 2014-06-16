@@ -10,7 +10,7 @@ Slidescore = do ->
   #   Variables
   # -------------------------------------
 
-  options: {}
+  options = {}
 
   index = 0
 
@@ -28,15 +28,22 @@ Slidescore = do ->
   # -------------------------------------
   #   Init
   #   -> Initialize the module
+  # -------------------------------------
+
+  init = ->
+    Slidescore.slidesLength = Slidescore.options.slides.length
+    setEvents()
+    setLocation() if window.location.hash
+
+  # -------------------------------------
+  #   Set Options
+  #   -> Sets the options object
   #
   #   options - the options object
   # -------------------------------------
 
-  init = (options) ->
+  setOptions = (options) ->
     Slidescore.options = options
-    Slidescore.slidesLength = Slidescore.options.slides.length
-    setEvents()
-    setLocation() if window.location.hash
 
   # -------------------------------------
   #   Set Events
@@ -140,6 +147,7 @@ Slidescore = do ->
   # -------------------------------------
 
   init: init
+  setOptions: setOptions
 
 # -------------------------------------
 #   Document Ready
@@ -152,5 +160,6 @@ $ ->
     offsetPadding: 40
     modal: $('.modal')
 
+  Slidescore.setOptions(options)
   Slidescore.init(options)
 

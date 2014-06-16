@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.6.1
+06/16/14
+
+- **Update** how the JS options are passed in
+
 ## Version 1.6.0
 06/14/14
 
