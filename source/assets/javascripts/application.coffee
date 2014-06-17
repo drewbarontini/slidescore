@@ -36,6 +36,7 @@ Slidescore = do ->
     slidesLength = settings.slides.length
     setEvents()
     setLocation() if window.location.hash
+    fixBrokenImages()
 
   # -------------------------------------
   #   Set Options
@@ -155,6 +156,15 @@ Slidescore = do ->
   modal = (action) ->
     settings.modal.toggleClass('is-active') if action == 'open'
     settings.modal.removeClass('is-active') if action == 'close'
+
+  # -------------------------------------
+  #   Set Broken Images
+  #   -> Sets a placehold image for unloaded images
+  # -------------------------------------
+
+  fixBrokenImages = ->
+    $('img').error ->
+      $(@).attr('src', "http://placehold.it/1024x768/000/000/")
 
   # -------------------------------------
   #   Public Methods

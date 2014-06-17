@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.6.5
+06/17/14
+
+- **Add** a check to set a placeholder image on broken images
+
 ## Version 1.6.4
 06/16/14
 
