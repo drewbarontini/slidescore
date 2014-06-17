@@ -78,8 +78,8 @@ Keyboard Shortcuts
 ------------------
 
 - `h` &mdash; Go to the first slide
-- `j` &mdash; Go to the next slide
-- `k` &mdash; Go to the previous slide
+- `j`, `right arrow`, `spacebar` &mdash; Go to the next slide
+- `k`, `left arrow`  &mdash; Go to the previous slide
 - `l` &mdash; Go to the last slide
 
 Setup
