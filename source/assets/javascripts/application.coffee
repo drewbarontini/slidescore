@@ -36,6 +36,7 @@ Slidescore = do ->
     slidesLength = settings.slides.length
     setEvents()
     setLocation() if window.location.hash
+    updateProgress()
     fixBrokenImages()
 
   # -------------------------------------
@@ -56,13 +57,13 @@ Slidescore = do ->
   setEvents = ->
     $(document).on 'keydown', (e) ->
       switch getKeyCode(e)
-        when shortcuts.h then setSlide(1)
-        when shortcuts.j then nextSlide()
-        when shortcuts.next then nextSlide()
-        when shortcuts.space then nextSlide()
-        when shortcuts.k then prevSlide()
-        when shortcuts.prev then prevSlide()
-        when shortcuts.l then setSlide(slidesLength)
+        when shortcuts.h then gotoSlide(1)
+        when shortcuts.j then gotoSlide('next')
+        when shortcuts.next then gotoSlide('next')
+        when shortcuts.space then gotoSlide('next')
+        when shortcuts.k then gotoSlide('prev')
+        when shortcuts.prev then gotoSlide('prev')
+        when shortcuts.l then gotoSlide(slidesLength)
         when e.shiftKey && shortcuts.q then modal('open')
         when shortcuts.esc then modal('close')
 
@@ -92,38 +93,39 @@ Slidescore = do ->
     scrollTo(index)
 
   # -------------------------------------
-  #   Set Slide
-  #   -> Set the specific slide
-  #
-  #   number - the slide number
+  #   Update Progress
+  #   -> Updates the progress bar as you go
   # -------------------------------------
 
-  setSlide = (number) ->
-    index = number
+  updateProgress = ->
+    progress = Math.round ( (index / slidesLength) * 100 )
+    settings.progress.css('width', "#{progress}%")
+
+  # -------------------------------------
+  #   Goto Slide
+  #   -> Handles the slide navigation
+  # -------------------------------------
+
+  gotoSlide = (slide) ->
+    switch slide
+      when 'next'
+        index++ unless index == slidesLength
+      when 'prev'
+        index-- unless index == 1
+      else
+        index = slide
+
+    update()
+
+  # -------------------------------------
+  #   Update
+  #   -> Run the necessary functions when slides change
+  # -------------------------------------
+
+  update = ->
     scrollTo()
     changeUrl()
-
-  # -------------------------------------
-  #   Next Slide
-  #   -> Move to the next slide
-  # -------------------------------------
-
-  nextSlide = ->
-    unless index == slidesLength
-      index++
-      scrollTo()
-      changeUrl()
-
-  # -------------------------------------
-  #   Previous Slide
-  #   -> Move to the previous slide
-  # -------------------------------------
-
-  prevSlide = ->
-    unless index == 1
-      index--
-      scrollTo()
-      changeUrl()
+    updateProgress()
 
   # -------------------------------------
   #   Scroll To
@@ -183,6 +185,7 @@ $ ->
     scrollSpeed: 250
     offsetPadding: 40
     modal: $('.modal')
+    progress: $('.progress')
 
   Slidescore.setOptions(options)
   Slidescore.init()

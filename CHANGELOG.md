@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.70
+06/18/14
+
+- **Update** the slide navigation methods (refactor)
+- **Add** a progress bar
+
 ## Version 1.6.5
 06/17/14
 
