@@ -1,130 +1,378 @@
-# Changelog
+Changelog
+=========
 
-## Version 1.70
-06/18/14
+1.7.0 - 2014-06-18
+------------------
 
-- **Update** the slide navigation methods (refactor)
-- **Add** a progress bar
+### Added
 
-## Version 1.6.5
-06/17/14
+- Progress bar
 
-- **Add** a check to set a placeholder image on broken images
+### Removed
 
-## Version 1.6.4
-06/16/14
+- Nothing
 
-- **Update** the keyboard shortcut for the `?` to work correctly
-- Also, **Add** a more robust check for `e.which` or `e.keyCode`
+### Fixed
 
-## Version 1.6.3
-06/16/14
+- Slide navigation methods (refactor)
 
-- **Remove** unneeded `options` argument in `Slidescore.init()`
+1.6.5 - 2014-06-17
+------------------
 
-## Version 1.6.2
-06/16/14
+### Added
 
-- **Update** the JS module variables
+- Check to set a placeholder image on broken images
 
-## Version 1.6.1
-06/16/14
+### Removed
 
-- **Update** how the JS options are passed in
+- Nothing
 
-## Version 1.6.0
-06/14/14
+### Fixed
 
-- **Add** keyboard shortcuts modal
-- **Add** additional alias keyboard shortcuts for navigation
+- Nothing
 
-## Version 1.5.4
-06/14/14
+1.6.4 - 2014-06-16
+------------------
 
-- **Add** viewport meta tag
+### Added
 
-## Version 1.5.3
-06/14/14
+- More robust check for `e.which` or `e.keyCode`
 
-- **Update** the scroll offset
+### Removed
 
-## Version 1.5.2
-06/14/14
+- Nothing
 
-- **Add** an offset to the scrolling to increase the padding
+### Fixed
 
-## Version 1.5.1
-06/14/14
+- Keyboard shortcut for the `?` to work correctly
 
-- **Update** the keyboard navigation functionality
+1.6.3 - 2014-06-16
+------------------
 
-## Version 1.5.0
-06/14/14
+### Added
 
-- **Add** keyboard shortcuts for navigation
+- Nothing
 
-## Version 1.4.4
-06/14/14
+### Removed
 
-- **Update** responsiveness of the slides
+- Unneeded `options` argument in `Slidescore.init()`
 
-## Version 1.4.3
-06/12/14
+### Fixed
 
-- **Update** font styles
+- Nothing
 
-## Version 1.4.2
-06/12/14
+1.6.2 - 2014-06-16
+------------------
 
-- **Update** the image file extension check
+### Added
 
-## Version 1.4.1
-06/12/14
+- Nothing
 
-- **Remove** unused JavaScript file call
+### Removed
 
-## Version 1.4.0
-06/12/14
+- Nothing
 
-- **Add** the ability to specify multiple images per section
+### Fixed
 
-## Version 1.3.0
-06/12/14
+- The JS module variables
 
-- **Remove** the leading `0` before image and partial filenames
+1.6.1 - 2014-06-16
+------------------
 
-## Version 1.2.3
-06/12/14
+### Added
 
-- **Remove** the top margin of the slide content
+- Nothing
 
-## Version 1.2.2
-06/12/14
+### Removed
 
-- **Remove** unneeded CSS
+- Nothing
 
-## Version 1.2.1
-06/11/14
+### Fixed
 
-- **Update** list styles
+- How the JS options are passed in
 
-## Version 1.2.0
-06/11/14
+1.6.0 - 2014-06-14
+------------------
 
-- **Add** the ability to move the slide description into a partial Markdown file
+### Added
 
-## Version 1.1.0
-06/11/14
+- Keyboard shortcuts modal
+- Additional alias keyboard shortcuts for navigation
 
-- **Update** the YAML Markdown
+### Removed
 
-## Version 1.0.1
-06/11/14
+- Nothing
 
-- **Update** the slide description markup
+### Fixed
 
-## Version 1.0.0
-06/11/14
+- Nothing
+
+1.5.4 - 2014-06-14
+------------------
+
+### Added
+
+- Viewport meta tag
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+1.5.3 - 2014-06-14
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- The scroll offset
+
+1.5.2 - 2014-06-14
+------------------
+
+### Added
+
+- Offset to the scrolling to increase the padding
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+1.5.1 - 2014-06-14
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- The keyboard navigation functionality
+
+1.5.0 - 2014-06-14
+------------------
+
+### Added
+
+- Keyboard shortcuts for navigation
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+1.4.4 - 2014-06-14
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Responsiveness of the slides
+
+1.4.3 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Font styles
+
+1.4.2 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- The image file extension check
+
+1.4.1 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Unused JavaScript file call
+
+### Fixed
+
+- Nothing
+
+1.4.0 - 2014-06-12
+------------------
+
+### Added
+
+- Ability to specify multiple images per section
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+1.3.0 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Leading `0` before image and partial filenames
+
+### Fixed
+
+- Nothing
+
+1.2.3 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Top margin of the slide content
+
+### Fixed
+
+- Nothing
+
+1.2.2 - 2014-06-12
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Unneeded CSS
+
+### Fixed
+
+- Nothing
+
+1.2.1 - 2014-06-11
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- List styles
+
+1.2.0 - 2014-06-11
+------------------
+
+### Added
+
+- Ability to move the slide description into a partial Markdown file
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
+1.1.0 - 2014-06-11
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- The YAML Markdown
+
+1.0.1 - 2014-06-11
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- The slide description markup
+
+1.0.0 - 2014-06-11
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
 
 - Initial version applied
-
