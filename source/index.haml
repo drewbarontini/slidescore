@@ -1,8 +1,8 @@
 - data.slides.each.with_index do |slide, i|
   %section.bdrb.mbl.pbl{ 'data-id' => "#{i + 1}" }
-    .grid{ id: (slide.title ? "#{slugify(slide.title)}" : "slide-#{i + 1}") }
-      .grid-box.grid-box--desk--1of2
-        .mbmbfm--desk
+    .g{ id: (slide.title ? "#{slugify(slide.title)}" : "slide-#{i + 1}") }
+      .g-b.g-b--m--1of2
+        .mbmbfm--m
           - file_ext = slide.file_ext ? slide.file_ext : data.config.file_ext
           - if slide.image
             = image_tag slide.image, alt: "#{slide.title}", class: ('mbs' if slide.additional_images)
@@ -15,7 +15,7 @@
             - else
               - (1..slide.additional_images_number).each_with_index do |image, image_index|
                 = image_tag "slides/#{i + 1}-#{image_index + 1}.#{file_ext}", alt: "#{slide.title}", class: 'mbs'
-      .grid-box.grid-box--desk--1of2
+      .g-b.g-b--m--1of2
         - if slide.title
           %h1.h2= slide.title
         - if slide.partial

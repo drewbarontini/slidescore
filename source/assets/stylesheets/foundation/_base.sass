@@ -7,8 +7,8 @@
 
 html
   background: $c-background
-  color: $c-base
-  font-family: $f-base
+  color: $c-text
+  font-family: $b-fontFamily
   font-size: $b-fontSize
   line-height: $b-lineHeight
 
@@ -20,15 +20,15 @@ body
 // -------------------------------------
 
 ul, ol, p
-  margin-bottom: $b-whitespace
+  margin-bottom: $b-space
   margin-top: 0
 
 ol, ul
   padding: 0
-  padding-left: $b-whitespace-l
+  padding-left: $b-space-l
 
 li
-  margin-bottom: $b-whitespace-s
+  margin-bottom: $b-space-s
   margin-top: 0
 
 // ----- Headers ----- //
@@ -37,9 +37,9 @@ h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4
-  font-family: $f-header
+  font-family: $b-fontFamily-heading
   line-height: 1.2
-  margin-bottom: $b-whitespace-s
+  margin-bottom: $b-space-s
   margin-top: 0
   text-transform: uppercase
 
@@ -68,7 +68,7 @@ a
 code
   border: $b-border
   border-radius: $b-borderRadius
-  font-family: $f-mono
+  font-family: $b-fontFamily-mono
   font-size: 75%
   padding: 0.1em 0.2em
 

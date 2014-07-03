@@ -12,10 +12,29 @@
 @import "http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700"
 
 // -------------------------------------
-//   Variables
+//   Colors
 // -------------------------------------
 
 // ----- Base ----- //
+
+$c-background-invert: #fff
+$c-background: #fff
+$c-highlight: #2980b9
+$c-subdue: #95a5a6
+$c-text-invert: #fff
+$c-text: #444
+
+// ----- Components ----- //
+
+// Progress
+
+$progress-background: $c-highlight
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
 
 $b-borderColor: #bdc3c7
 $b-borderStyle: solid
@@ -23,6 +42,12 @@ $b-borderWidth: 1px
 $b-border: $b-borderWidth $b-borderStyle $b-borderColor
 $b-borderRadius: 3px
 $b-boxShadow: 0 2px 0 rgba(#444, 0.25)
+
+// ----- Typography ----- //
+
+$b-fontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$b-fontFamily-heading: 'PT Sans Narrow', sans-serif
+$b-fontFamily-mono: 'Monaco', monospace
 $b-fontSize: 16px
 $b-fontSize-xs: 60%
 $b-fontSize-s: 75%
@@ -30,40 +55,31 @@ $b-fontSize-m: 90%
 $b-fontSize-l: 115%
 $b-fontSize-xl: 150%
 $b-lineHeight: 1.5
-$b-maxWidth: 62.5em // ~1000px
-$b-maxWidth-s: 43.75em // ~700px
-$b-whitespace: 1.25em // ~20px
-$b-whitespace-xs: 0.25 * $b-whitespace
-$b-whitespace-s: 0.5 * $b-whitespace
-$b-whitespace-l: 2 * $b-whitespace
-$b-whitespace-xl: 4 * $b-whitespace
 
-// ----- Colors ----- //
+// ----- Sizing ----- //
 
-$c-background: #fff
-$c-base: #444
-$c-highlight: #2980b9
-$c-invert: #fff
-$c-subdue: #95a5a6
+$b-maxWidth: em(1000px)
+$b-maxWidth-s: em(700px)
+$b-space: 1.25em // ~20px
+$b-space-xs: 0.25 * $b-space
+$b-space-s: 0.5 * $b-space
+$b-space-l: 2 * $b-space
+$b-space-xl: 4 * $b-space
 
-// ----- Fonts ----- //
-
-$f-base: 'Helvetica Neue', Helvetica, Arial, sans-serif
-$f-header: 'PT Sans Narrow', sans-serif
-$f-mono: 'Monaco', monospace
-
-// ----- Breakpoints ----- //
-
-$breakpoint-mobile: 30em // ~480px
-$breakpoint-desk: 50em // ~800px
+// -------------------------------------
+//   Components
+// -------------------------------------
 
 // ----- Grid ----- //
 
-$grid-columns: 2
-$grid-defaults: 'mobile' $breakpoint-mobile, 'desk' $breakpoint-desk
+$g-s: em(480px)
+$g-m: em(800px)
+
+$g-columns: 2
+$g-defaults: 's' $g-s, 'm' $g-m
 $grid-gutter: 30px
 
 // ----- Progress ----- //
 
-$progress-background: $c-highlight
 $progress-height: 10px
+

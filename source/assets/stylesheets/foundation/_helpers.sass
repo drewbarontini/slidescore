@@ -1,7 +1,7 @@
 // *************************************
 //
 //   Helpers
-//   -> Functions, Mixins, Animations
+//   -> Functions, Mixins, Extends, Animations
 //
 // *************************************
 
@@ -9,7 +9,17 @@
 //   Functions
 // -------------------------------------
 
-// ...
+// ----- Em ----- //
+// -> Converts pixel value to an em
+//
+// $target - the target pixel size
+// $context - the context font-size
+
+@function em($target, $context: $b-fontSize)
+  @if ($target == 0)
+    @return 0
+  @else
+    @return ($target / $context) * 1em
 
 // -------------------------------------
 //   Mixins
@@ -47,6 +57,50 @@
 =respond-to($val, $query: min-width, $media: screen)
   @media #{$media} and ($query: $val)
     @content
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Debug ----- //
+
+.debug
+  background-color: pink !important
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ----- Image Replacement ----- //
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  &::before
+    content: ''
+    display: block
+    width: 0
+    height: 150%
+
+// ----- Stretch ----- //
+
+.stretch
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
 
 // -------------------------------------
 //   Animations

@@ -32,7 +32,7 @@
 // ----- Active ----- //
 
 .modal.is-active
-  +respond-to($breakpoint-desk)
+  +respond-to($g-m)
     display: block
 
 // -------------------------------------
@@ -50,23 +50,23 @@
 // ----- Close ----- //
 
 .modal-close
-  color: $c-invert
+  color: $c-text-invert
   display: block
   font-size: 150%
   position: absolute
-  right: $b-whitespace
+  right: $b-space
   text-decoration: none
-  top: $b-whitespace-s
+  top: $b-space-s
   z-index: 40
   &:hover,
   &:focus
-    color: $c-invert
+    color: $c-text-invert
     text-decoration: underline
 
 // ----- Content ----- //
 
 .modal-content
-  color: $c-invert
+  color: $c-text-invert
   left: 50%
   position: absolute
   top: 50%
@@ -84,12 +84,12 @@
   padding: 0
   span
     display: block
-    +respond-to($breakpoint-mobile)
+    +respond-to($g-s)
       display: inline
   code
-    padding-left: $b-whitespace
-    padding-right: $b-whitespace
-    +respond-to($breakpoint-mobile)
+    padding-left: $b-space
+    padding-right: $b-space
+    +respond-to($g-s)
       float: left
       margin-top: 3px // FIXME: Magic number!
 

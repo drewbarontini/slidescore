@@ -1,6 +1,21 @@
 Changelog
 =========
 
+1.7.1 - 2014-07-02
+------------------
+
+### Added
+
+- Nothing
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Update to MVCSS v4.0.0
+
 1.7.0 - 2014-06-18
 ------------------
 
