@@ -1,6 +1,22 @@
 Changelog
 =========
 
+1.8.0 - 2014-12-01
+------------------
+
+### Added
+
+- Bower for JavaScript dependency management
+- Unveil.js for lazy loading of images
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Upgraded to the latest jQuery 2.1.1
+
 1.7.2 - 2014-07-02
 ------------------
 
