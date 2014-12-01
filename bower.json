@@ -1,0 +1,11 @@
+{
+  "name": "Slidescore",
+  "version": "1.7.2",
+  "homepage": "https://github.com/drewbarontini/slidescore",
+  "description": "A transcript for your slides",
+  "authors": [
+    "Drew Barontini"
+  ],
+  "license": "MIT",
+  "private": true
+}

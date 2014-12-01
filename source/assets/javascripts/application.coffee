@@ -179,7 +179,7 @@ Slidescore = do ->
 #   Document Ready
 # -------------------------------------
 
-$ ->
+jQuery ($) ->
   options =
     slides: $('section')
     scrollSpeed: 250
@@ -189,4 +189,6 @@ $ ->
 
   Slidescore.setOptions(options)
   Slidescore.init()
+
+  $('img').unveil()
 
