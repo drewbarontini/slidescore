@@ -90,6 +90,13 @@ gem install bundler
 bundle install
 ```
 
+Next, install Bower for JavaScript dependency management.
+
+```shell
+npm install -g bower
+bower install
+```
+
 Running the Application
 -----------------------
 
