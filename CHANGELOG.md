@@ -1,6 +1,21 @@
 Changelog
 =========
 
+1.8.1 - 2015-01-23
+------------------
+
+### Added
+
+- Better comments in `config.rb`
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Nothing
+
 1.8.0 - 2014-12-01
 ------------------
 

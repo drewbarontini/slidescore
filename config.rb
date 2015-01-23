@@ -1,9 +1,32 @@
+# ====================================
+#   Activate Plugins
+# ====================================
+
 activate :automatic_image_sizes
 activate :directory_indexes
 activate :livereload
 
+# ====================================
+#   Ignore Files & Directories
+# ====================================
+
+ignore 'assets/javascripts/vendor/*'
+
+# ====================================
+#   Global Variables
+# ====================================
+
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
+
+# ====================================
+#   Helpers
+# ====================================
 
 helpers do
   def slugify(string)
@@ -11,14 +34,10 @@ helpers do
   end
 end
 
-ignore 'assets/javascripts/vendor/*'
+# ====================================
+#   Build Configuration
+# ====================================
 
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir, 'assets/fonts'
-
-# Build-specific configuration
 configure :build do
   activate :minify_css
   activate :minify_javascript
