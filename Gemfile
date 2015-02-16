@@ -6,3 +6,4 @@ gem "redcarpet"
 
 gem 'middleman'
 gem 'middleman-livereload'
+gem 'middleman-autoprefixer'
