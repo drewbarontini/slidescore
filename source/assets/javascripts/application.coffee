@@ -191,4 +191,3 @@ jQuery ($) ->
   Slidescore.init()
 
   $('img').unveil()
-

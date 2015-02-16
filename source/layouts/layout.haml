@@ -17,13 +17,18 @@
     %main.content
       .row
         .cell
+
           - if data.config.table_of_contents
+
             %ol.mbl
+
               - data.slides.each.with_index do |slide, i|
+
                 - if slide.title
-                  %li= link_to slide.title, "##{slugify(slide.title)}"
+                  %li= link_to slide.title, "##{ slugify(slide.title) }"
+
                 - else
-                  %li= link_to "Slide #{i + 1}", "#slide-#{i + 1}"
+                  %li= link_to "Slide #{ i + 1 }", "#slide-#{ i + 1 }"
 
           .bdrt.ptl
             = yield

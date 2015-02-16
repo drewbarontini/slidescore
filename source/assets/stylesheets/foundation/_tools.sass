@@ -70,6 +70,13 @@
 .mbxl
   margin-bottom: $b-space-xl
 
+// Responsiveness
+
++respond-to($g-m)
+
+  .mbm--f
+    margin-bottom: 0
+
 // ----- Horizontal ----- //
 
 .mhc
@@ -207,15 +214,6 @@
   position: relative
 .pos
   position: static
-
-// -------------------------------------
-//   Responsiveness
-// -------------------------------------
-
-.mbmbfm--m
-  margin-bottom: $b-space
-  +respond-to($g-m)
-    margin-bottom: 0
 
 // -------------------------------------
 //   Rounding

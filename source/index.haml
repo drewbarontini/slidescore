@@ -1,26 +1,36 @@
 - data.slides.each.with_index do |slide, i|
-  %section.bdrb.mbl.pbl{ 'data-id' => "#{i + 1}" }
-    .g{ id: (slide.title ? "#{slugify(slide.title)}" : "slide-#{i + 1}") }
+
+  %section.bdrb.mbl.pbl{ 'data-id' => "#{ i + 1 }" }
+    .g{ id: (slide.title ? "#{ slugify(slide.title) }" : "slide-#{ i + 1 }") }
       .g-b.g-b--m--1of2
-        .mbmbfm--m
+        .mbm.mbf--m
+
           - file_ext = slide.file_ext ? slide.file_ext : data.config.file_ext
           - if slide.image
+
             = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => image_path(slide.image), alt: "#{ slide.title }", class: ('mbs' if slide.additional_images)
+
           - else
             = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => "#{ image_path( "slides/#{ i + 1 }.#{ file_ext }" ) }", alt: "#{ slide.title }", class: ('mbs' if slide.additional_images)
+
           - if slide.additional_images
+
             - unless slide.additional_images == true
               - slide.additional_images.each do |image|
-                = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => image_path(image), alt: "#{slide.title}", class: 'mbs'
+                = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => image_path(image), alt: "#{ slide.title }", class: 'mbs'
+
             - else
               - (1..slide.additional_images_number).each_with_index do |image, image_index|
-                = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => "#{ image_path( "slides/#{i + 1}-#{image_index + 1}.#{file_ext}" ) }", alt: "#{slide.title}", class: 'mbs'
+                = image_tag 'http://placehold.it/1280x720/000/000', 'data-src' => "#{ image_path( "slides/#{ i + 1 }-#{ image_index + 1 }.#{ file_ext }" ) }", alt: "#{ slide.title }", class: 'mbs'
+
       .g-b.g-b--m--1of2
+
         - if slide.title
           %h1.h2= slide.title
+
         - if slide.partial
           = partial "slides/#{i + 1}"
+
         - else
           :markdown
             #{ slide.description }
-
