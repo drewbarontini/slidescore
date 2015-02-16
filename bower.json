@@ -7,5 +7,9 @@
     "Drew Barontini"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "jquery-unveil": "~1.3.0"
+  }
 }
