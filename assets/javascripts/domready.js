@@ -1,0 +1,1 @@
+(function(){jQuery(function(i){return Slidescore.init(),i("img").unveil()})}).call(this);
