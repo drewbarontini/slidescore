@@ -1,6 +1,25 @@
 Changelog
 =========
 
+2.0.0 - 2015-02-16
+------------------
+
+### Added
+
+- Autoprefixer
+
+### Removed
+
+- Nothing
+
+### Fixed
+
+- Update Middleman to 3.3.8
+- Update MVCSS to 4.0.8
+- Use glob importing in application.sass
+- Update JavaScript organization
+- Moved Bower components to /bower_components
+
 1.8.1 - 2015-01-23
 ------------------
 
